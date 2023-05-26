@@ -102,5 +102,25 @@ namespace HelpMe.Controllers
                 return StatusCode(500, $"Internal server error: {e.Message}");
             }
         }
+        
+        [HttpGet("/Type/{id}")]
+        public async Task<IActionResult> GetIncidentTypeById(int id)
+        {
+            try
+            {
+                var incidentType = await _incidentService.GetIncidentTypeById(id);
+
+                if (incidentType == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(incidentType);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
     }
 }

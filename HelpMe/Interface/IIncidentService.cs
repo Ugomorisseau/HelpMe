@@ -9,4 +9,6 @@ public interface IIncidentService
     Task CreateIncident(Incident incident);
     Task ModifyIncident(Incident incident);
     Task DeleteIncident(Incident incident);
+    Task<TypeIncident> GetIncidentTypeById(int id);
+
 }

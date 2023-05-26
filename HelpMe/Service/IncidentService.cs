@@ -41,5 +41,10 @@ namespace HelpMe.Service
             _context.Incidents.Remove(incident);
             await _context.SaveChangesAsync();
         }
+        
+        public async Task<TypeIncident> GetIncidentTypeById(int id)
+        {
+            return await _context.TypeIncidents.FindAsync(id);
+        }
     }
 }

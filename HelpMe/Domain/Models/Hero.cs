@@ -28,9 +28,6 @@
         public double Longitude { get; set; }
 
         public string PhoneNumber { get; set; }
-        
-        public string Password { get; set; }
-
         public virtual ICollection<TypeIncidentHero>? TypeIncidentHero { get; set; }
         public virtual ICollection<HeroIncident>? HeroIncident { get; set; }
 
@@ -41,7 +38,6 @@
             Latitude = hero.Latitude;
             Longitude = hero.Longitude;
             PhoneNumber = hero.PhoneNumber;
-            Password = hero.Password;
             HeroIncident = hero.HeroIncident;
             TypeIncidentHero = hero.TypeIncidentHero;
         }
