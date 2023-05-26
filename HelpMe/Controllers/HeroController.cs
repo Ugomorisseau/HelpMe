@@ -102,5 +102,19 @@ namespace HelpMe.Controllers
                 return StatusCode(500, $"Internal server error: {e.Message}");
             }
         }
+
+        [HttpPost("Login")]
+        public IActionResult Login([FromBody] LoginModel loginModel)
+        {
+            var heroAuth = _heroService.Auth(loginModel.Name, loginModel.Password);
+            if (heroAuth != null)
+            {
+                var heroDetails = new HeroViewModel(heroAuth);
+
+                return Ok(heroDetails);
+            }
+
+            return Unauthorized("Invalid credentials");
+        }
     }
 }

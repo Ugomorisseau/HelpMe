@@ -41,5 +41,15 @@ namespace HelpMe.Service
             _context.Heroes.Remove(hero);
             await _context.SaveChangesAsync();
         }
+
+        public Hero Auth(string name, string password)
+        {
+            var hero = _context.Heroes.FirstOrDefault(x => x.Name == name);
+
+            if (hero == null || !BCrypt.Net.BCrypt.Verify(password, hero.Password))
+                return null;
+
+            return hero;
+        }
     }
 }

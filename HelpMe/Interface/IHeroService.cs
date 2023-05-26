@@ -9,4 +9,6 @@ public interface IHeroService
     Task CreateHero(Hero hero);
     Task ModifyHero(Hero hero);
     Task DeleteHero(Hero hero);
+    Hero Auth(string name, string password);
+
 }

@@ -2,17 +2,17 @@
 {
     public class Incident
     {
-        public int Id { get; set; } // ID unique de l'incident dans la base de données
-        public int TypeIncidentId { get; set; } // ID de la ressource d'incident associée à cet incident
-        public string Ville { get; set; } // Nom de la ville associée à cet incident
-        public double Latitude { get; set; } // Latitude de la position géographique de cet incident
-        public double Longitude { get; set; } // Longitude de la position géographique de cet incident
-        public bool IsResolved { get; set; } // Booléen qui indique si l'incident a été résolu
+        public int Id { get; set; } 
+        public int TypeIncidentId { get; set; } 
+        public string Ville { get; set; }
+        public double Latitude { get; set; } 
+        public double Longitude { get; set; } 
+        public bool IsResolved { get; set; } 
 
         public virtual TypeIncident?
-            TypeIncident { get; set; } // Référence à la ressource d'incident associée à cet incident
+            TypeIncident { get; set; } 
 
         public virtual ICollection<HeroIncident>?
-            HeroIncident { get; set; } // Collection de références aux SuperHeroIncidents associés à cet incident
+            HeroIncident { get; set; } 
     }
 }

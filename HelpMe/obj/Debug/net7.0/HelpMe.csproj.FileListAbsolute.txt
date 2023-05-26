@@ -52,3 +52,4 @@ C:\Users\umorisseau\RiderProjects\HelpMe\HelpMe\bin\Debug\net7.0\System.CodeDom.
 C:\Users\umorisseau\RiderProjects\HelpMe\HelpMe\bin\Debug\net7.0\System.Text.Encodings.Web.dll
 C:\Users\umorisseau\RiderProjects\HelpMe\HelpMe\bin\Debug\net7.0\System.Text.Json.dll
 C:\Users\umorisseau\RiderProjects\HelpMe\HelpMe\bin\Debug\net7.0\runtimes\browser\lib\net7.0\System.Text.Encodings.Web.dll
+C:\Users\umorisseau\RiderProjects\HelpMe\HelpMe\bin\Debug\net7.0\BCrypt.Net-Core.dll

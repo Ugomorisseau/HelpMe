@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "sVd7W6XmaKfccv1Rrnv8wnxrnkrTSZ3m29SmBJS5oJPDcPAQ6zmVahlE/oxP8jYmPmsIjVK9J+c/NogVVOKSZg==",
+  "dgSpecHash": "zQ8uE6qWfRd/xPsjJKy2YOpVNpE3BzP3dOhXXqh9QoKKmdKp3E0RJXQzBQSZU8Pg4ERxHttrQby5OMtpdg131g==",
   "success": true,
   "projectFilePath": "C:\\Users\\umorisseau\\RiderProjects\\HelpMe\\HelpMe\\HelpMe.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\umorisseau\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
     "C:\\Users\\umorisseau\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\umorisseau\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.0-preview.4.23259.3\\microsoft.entityframeworkcore.8.0.0-preview.4.23259.3.nupkg.sha512",
     "C:\\Users\\umorisseau\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.0-preview.4.23259.3\\microsoft.entityframeworkcore.abstractions.8.0.0-preview.4.23259.3.nupkg.sha512",

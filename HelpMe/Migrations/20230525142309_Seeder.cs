@@ -7,6 +7,11 @@ namespace HelpMe.Migrations
     /// <inheritdoc />
     public partial class Seeder : Migration
     {
+        public static string HashPassword(string password)
+        {
+            return BCrypt.Net.BCrypt.HashPassword(password);
+        }
+        
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -29,12 +34,12 @@ namespace HelpMe.Migrations
 
             migrationBuilder.InsertData(
                 table: "Heroes",
-                columns: new[] { "Id", "Name", "Latitude", "Longitude", "PhoneNumber" },
+                columns: new[] { "Id", "Name", "Latitude", "Longitude", "PhoneNumber", "Password" },
                 values: new object[,]
                 {
-            { 1, "Spiderman", 48.8566, 2.3522, "0783390929" },
-            { 2, "Batman", 40.7128, -74.0060, "0603575889" },
-            { 3, "Aquaman", 37.7749, -122.4194, "0640208472" }
+            { 1, "Spiderman", 48.8566, 2.3522, "0783390929", HashPassword("spiderman") },
+            { 2, "Batman", 40.7128, -74.0060, "0603575889", HashPassword("batman") },
+            { 3, "Aquaman", 37.7749, -122.4194, "0640208472", HashPassword("Aquaman") }
                 });
 
             migrationBuilder.InsertData(
@@ -76,25 +81,21 @@ namespace HelpMe.Migrations
                 keyColumn: "Id",
                 keyValues: new object[] { 1, 2, 3 });
 
-            // Supprimer les Incidents
             migrationBuilder.DeleteData(
                 table: "Incidents",
                 keyColumn: "Id",
                 keyValues: new object[] { 1, 2, 3 });
 
-            // Supprimer les SuperHeroIncidentResources
             migrationBuilder.DeleteData(
                 table: "TypeIncidentHeroes",
                 keyColumn: "Id",
                 keyValues: new object[] { 1, 2, 3 });
 
-            // Supprimer les SuperHeroes
             migrationBuilder.DeleteData(
                 table: "Heroes",
                 keyColumn: "Id",
                 keyValues: new object[] { 1, 2, 3 });
 
-            // Supprimer les IncidentResources
             migrationBuilder.DeleteData(
                 table: "TypeIncidents",
                 keyColumn: "Id",
